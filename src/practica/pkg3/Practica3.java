@@ -1,5 +1,7 @@
 package practica.pkg3;
 
+import java.util.Scanner;
+
 /**
  * @author Luis Tobon
  */
@@ -8,12 +10,162 @@ public class Practica3 {
 
     public static void main(String[] args) {
         
+        int op = 0;
+        
+        do{
+            Scanner scan = new Scanner(System.in);
+            
+            System.out.println("Ingrese el metodo que desea ocupar: \n\n1. more20\n2. redTicket\n3. fizzString2"
+            + "\n4. makeChocolate\n5. theEnd\n6. makeOutWord\n7. without2\n8. swapEnds\n9. makeLast\n10. unlucky1"
+            + "\n11. matchUp\n12. only14\n13. has12\n14. twoTwo\n15. bobThere\n16. xyBalance\n17. xyzThere\n18. mixString"
+            + "\n19. mirrorEnds\n20. seriesUp\n21. Salir\n");
+            op = scan.nextInt();
+            
+            switch(op){
+                case 1:
+                    
+                    System.out.println("\nMetodo elegido: more20");
+                    System.out.print("Ingrese 1 numero a evaluar: ");
+                    int entrada = scan.nextInt();
+                    System.out.println("Entrada: " + entrada + "  - " + " Salida: " + more20(entrada));
+                    System.out.println("\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetir = scan.nextInt();
+                    if(repetir == 2){
+                        op = 21;
+                        System.out.println("Saliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
+                case 2:
+                    
+                    System.out.println("\nMetodo elegido: redTicket");
+                    System.out.println("Ingrese 3 numeros a evaluar: ");
+                    int entradared = scan.nextInt();
+                    int entradared2 = scan.nextInt();
+                    int entradared3 = scan.nextInt();
+                    System.out.println("Entrada: " + entradared + ", " + entradared2 + ", " + entradared3 + "  - " + " Salida: "  + redTicket(entradared,entradared2,entradared3));
+                    System.out.println("\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirred = scan.nextInt();
+                    if(repetirred == 2){
+                        op = 21;
+                        System.out.println("Saliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
+                case 3:
+                    
+                    System.out.println("\nMetodo elegido: fizzString2");
+                    System.out.print("Ingrese 1 numero a evaluar: ");
+                    int entradafiz = scan.nextInt();
+                    System.out.println("Entrada: " + entradafiz + "  - " + " Salida: " + fizzString2(entradafiz));
+                    System.out.println("\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirfiz = scan.nextInt();
+                    if(repetirfiz == 2){
+                        op = 21;
+                        System.out.println("Saliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
+                case 4:
+                    
+                    System.out.println("\nMetodo elegido: makeChocolate");
+                    System.out.println("Ingrese 3 numeros a evaluar: ");
+                    int entradamake = scan.nextInt();
+                    int entradamake2 = scan.nextInt();
+                    int entradamake3 = scan.nextInt();
+                    System.out.println("Entrada: " + entradamake + ", " + entradamake2 + ", " + entradamake3 + "  - " + " Salida: "  + makeChocolate(entradamake,entradamake2,entradamake3));
+                    System.out.println("\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirmake = scan.nextInt();
+                    if(repetirmake == 2){
+                        op = 21;
+                        System.out.println("Saliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
+                case 5:
+                    
+                    System.out.println("\nMetodo elegido: theEnd");
+                    scan.nextLine();
+                    System.out.println("Ingrese una palabra y su estado true o false ");
+                    String entradaend = scan.nextLine();
+                    boolean entradaend2 = scan.nextBoolean();
+                    System.out.println("Entrada: " + entradaend + ", " + entradaend2 + "  - " + " Salida: " + theEnd(entradaend, entradaend2));
+                    System.out.println("\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirend = scan.nextInt();
+                    if(repetirend == 2){
+                        op = 21;
+                        System.out.println("Saliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+
+                case 6:
+                    
+                    System.out.println("\nMetodo elegido: makeOutWord");
+                    scan.nextLine();
+                    System.out.println("Ingrese un patron y una frase ");
+                    String entradaout = scan.nextLine();
+                    String entradaout2 = scan.nextLine();
+                    System.out.println("Entrada: " + entradaout + ", " + entradaout2 + "  - " + " Salida: " + makeOutWord(entradaout, entradaout2));
+                    System.out.println("\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirout = scan.nextInt();
+                    if(repetirout == 2){
+                        op = 21;
+                        System.out.println("Saliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
+                case 7:
+                    
+                    System.out.println("\nMetodo elegido: without2");
+                    scan.nextLine();
+                    System.out.println("Ingrese una frase ");
+                    String entradawith = scan.nextLine();
+                    System.out.println("Entrada: " + entradawith + "  - " + " Salida: " + without2(entradawith));
+                    System.out.println("\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirwith = scan.nextInt();
+                    if(repetirwith == 2){
+                        op = 21;
+                        System.out.println("Saliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
+                case 21:
+                    System.out.println("Saliendo");
+                    break;
+                    
+                default:
+                    System.out.println("\nIngrese una opcion valida\n");
+                    break;
+            }
+            
+        }while(op != 21);
     }
     
     
 //José Luis Tobón Martínez S19017385
 
-public boolean more20(int n) {
+public static boolean more20(int n) {
   boolean estado = false;
   if(n % 20 == 1 || n % 20 == 2){
     estado = true;
@@ -25,7 +177,7 @@ public boolean more20(int n) {
 
 
 
-public int redTicket(int a, int b, int c) {
+public static int redTicket(int a, int b, int c) {
   int resultado = 0;
   
   if(a == 2 && b == 2 && c == 2){
@@ -51,7 +203,7 @@ public int redTicket(int a, int b, int c) {
 
 
 
-public String fizzString2(int n) {
+public static String fizzString2(int n) {
   
   String resultado;
   
@@ -79,7 +231,7 @@ public String fizzString2(int n) {
 
 
 
-public int makeChocolate(int small, int big, int goal) {
+public static int makeChocolate(int small, int big, int goal) {
   
   int mBig = goal / 5;
   
@@ -107,7 +259,7 @@ public int makeChocolate(int small, int big, int goal) {
 
 
 
-public String theEnd(String str, boolean front) {
+public static String theEnd(String str, boolean front) {
   
   String resul = null;
   
@@ -122,7 +274,7 @@ public String theEnd(String str, boolean front) {
 
 
 
-public String makeOutWord(String out, String word) {
+public static String makeOutWord(String out, String word) {
   
   String mensaje, mensaje2, salida = null;
   
@@ -135,7 +287,7 @@ public String makeOutWord(String out, String word) {
 
 
 
-public String without2(String str) {
+public static String without2(String str) {
   
   if (str.length() < 2){
             
@@ -243,7 +395,6 @@ public boolean unlucky1(int[] nums) {
 
 
 
-
 public int matchUp(int[] nums1, int[] nums2) {
   
   int cuenta = 0;
@@ -286,7 +437,6 @@ public boolean only14(int[] nums) {
 
 
 
-
 public boolean has12(int[] nums) {
   
   int indice = -1; 
@@ -305,7 +455,6 @@ public boolean has12(int[] nums) {
 
 
 
-
 public boolean twoTwo(int[] nums) {
   
   for (int i = 0; i < nums.length; i++) {
@@ -320,7 +469,6 @@ public boolean twoTwo(int[] nums) {
   return true;
 
 }
-
 
 
 
@@ -394,7 +542,6 @@ public boolean xyzThere(String str) {
 
 
 
-
 public String mixString(String a, String b) {
   
   String resultado = "";
@@ -423,7 +570,6 @@ public String mixString(String a, String b) {
 
 
 
-
 public String mirrorEnds(String string) {
   
   String resultado = "";
@@ -442,7 +588,6 @@ public String mirrorEnds(String string) {
   return resultado;
   
 }
-
 
 
 
