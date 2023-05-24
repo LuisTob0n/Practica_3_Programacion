@@ -151,6 +151,100 @@ public class Practica3 {
                     }
                     break;
                     
+                case 8:
+                    
+                    System.out.println("\nMetodo elegido: swapEnds");
+                    System.out.print("Ingrese la cantidad de numeros a ingresar: ");
+                    int entradaends = scan.nextInt();
+                    int[] numeros = new int[entradaends];
+                    System.out.println("");
+                    for(int i = 0; i <= entradaends - 1; i++){
+                        System.out.print("Ingrese el numero " + (i+1) + ": ");
+                        numeros[i] = scan.nextInt();
+                    }
+                    System.out.println("");
+                    System.out.print("Entrada: ");
+                    for(int i = 0; i <= entradaends - 1; i++){
+                        System.out.print(numeros[i] + ", ");
+                    }
+                    swapEnds(numeros);
+                    System.out.print("\nSalida: ");
+                    for(int i = 0; i <= entradaends - 1; i++){
+                        System.out.print(numeros[i] + ", ");
+                    }
+                    System.out.println("\n\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirends = scan.nextInt();
+                    if(repetirends == 2){
+                        op = 21;
+                        System.out.println("\nSaliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
+                case 9:
+                    
+                    System.out.println("\nMetodo elegido: makeLast");
+                    System.out.print("Ingrese la cantidad de numeros a ingresar: ");
+                    int entradalast = scan.nextInt();
+                    int[] nums = new int[entradalast];
+                    System.out.println("");
+                    for(int i = 0; i <= entradalast - 1; i++){
+                        System.out.print("Ingrese el numero " + (i+1) + ": ");
+                        nums[i] = scan.nextInt();
+                    }
+                    System.out.println("");
+                    System.out.print("Entrada: ");
+                    for(int i = 0; i <= entradalast - 1; i++){
+                        System.out.print(nums[i] + ", ");
+                    }
+                    int[] resul = makeLast(nums);
+                    System.out.print("\nSalida: ");
+                    for(int i = 0; i <= resul.length - 1; i++){
+                        System.out.print(resul[i] + ", ");
+                    }
+                    System.out.println("\n\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirlast = scan.nextInt();
+                    if(repetirlast == 2){
+                        op = 21;
+                        System.out.println("\nSaliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
+                case 10:
+                    
+                    System.out.println("\nMetodo elegido: unlucky1");
+                    System.out.print("Ingrese la cantidad de numeros a ingresar: ");
+                    int entradaun = scan.nextInt();
+                    int[] num = new int[entradaun];
+                    System.out.println("");
+                    for(int i = 0; i <= entradaun - 1; i++){
+                        System.out.print("Ingrese el numero " + (i+1) + ": ");
+                        num[i] = scan.nextInt();
+                    }
+                    System.out.println("");
+                    System.out.print("Entrada: ");
+                    for(int i = 0; i <= entradaun - 1; i++){
+                        System.out.print(num[i] + ", ");
+                    }
+                    boolean result = unlucky1(num);
+                    System.out.print("\nSalida: ");
+                    System.out.print(result);
+                    System.out.println("\n\nDesea usar otro metodo?\n1.Si\n2.No\n");
+                    int repetirun = scan.nextInt();
+                    if(repetirun == 2){
+                        op = 21;
+                        System.out.println("\nSaliendo...");
+                        break;
+                    }else{
+                        System.out.println("");
+                    }
+                    break;
+                    
                 case 21:
                     
                     System.out.println("Saliendo");
@@ -326,7 +420,7 @@ public class Practica3 {
 
 
 
-    public int[] swapEnds(int[] nums) {
+    public static int[] swapEnds(int[] nums) {
 
       int size = nums.length - 1;
 
@@ -345,7 +439,7 @@ public class Practica3 {
 
 
 
-    public int[] makeLast(int[] nums) {
+    public static int[] makeLast(int[] nums) {
 
       int size = nums.length - 1;
       int tamaño = nums.length ;
@@ -369,7 +463,7 @@ public class Practica3 {
 
 
 
-    public boolean unlucky1(int[] nums) {
+    public static boolean unlucky1(int[] nums) {
 
       boolean estado = false;
       int size = nums.length -1;
